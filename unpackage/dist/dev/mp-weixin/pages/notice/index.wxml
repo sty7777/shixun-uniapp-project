@@ -1,0 +1,1 @@
+<view class="px-2"><i-news-list vue-id="fe0ecd9c-1" resdata="{{newsList}}" data-event-opts="{{[['^click',[['toShow']]]]}}" bind:click="__e" bind:__l="__l"></i-news-list></view>

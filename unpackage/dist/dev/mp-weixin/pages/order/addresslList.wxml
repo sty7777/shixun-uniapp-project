@@ -1,0 +1,1 @@
+<view class="px-2"><i-address-list vue-id="a44ead14-1" resdata="{{list}}" data-event-opts="{{[['^click',[['toShow']]]]}}" bind:click="__e" bind:__l="__l"></i-address-list></view>

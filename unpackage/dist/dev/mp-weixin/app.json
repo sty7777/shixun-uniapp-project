@@ -1,0 +1,64 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/index/index",
+    "pages/class/class",
+    "pages/cart/cart",
+    "pages/mine/mine",
+    "pages/list/list",
+    "pages/detail/detail",
+    "pages/order/orderAdd",
+    "pages/order/orderList",
+    "pages/order/pay",
+    "pages/order/orderDetail",
+    "pages/order/addressAdd",
+    "pages/order/addresslList",
+    "pages/order/couponList",
+    "pages/evaluate/add",
+    "pages/evaluate/list",
+    "pages/evaluate/detail",
+    "pages/notice/index",
+    "pages/notice/detail",
+    "pages/goods/goods"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "铁云链商城",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "color": "#8a8a8a",
+    "selectedColor": "#e43d33",
+    "borderStyle": "white",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "static/tabbar/home.png",
+        "selectedIconPath": "static/tabbar/home_.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/goods/goods",
+        "iconPath": "/static/tabbar/shangpin2.png",
+        "selectedIconPath": "/static/tabbar/shangpin1.png",
+        "text": "商品"
+      },
+      {
+        "pagePath": "pages/cart/cart",
+        "iconPath": "/static/tabbar/dingdang1.png",
+        "selectedIconPath": "/static/tabbar/dingdang2.png",
+        "text": "订单"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "iconPath": "static/tabbar/mine.png",
+        "selectedIconPath": "static/tabbar/mine_.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "usingComponents": {}
+}

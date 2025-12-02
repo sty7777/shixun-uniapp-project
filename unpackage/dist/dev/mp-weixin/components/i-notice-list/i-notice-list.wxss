@@ -1,0 +1,5 @@
+
+.swiperNotice {
+	  height: 50rpx; line-height: 50rpx;
+}
+

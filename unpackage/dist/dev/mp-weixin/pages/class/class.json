@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "商品",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "i-category": "/components/i-category/i-category"
+  }
+}

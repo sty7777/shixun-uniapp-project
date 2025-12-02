@@ -1,0 +1,16 @@
+{
+  "navigationBarTitleText": "商城",
+  "navigationStyle": "custom",
+  "backgroundColor": "#000000",
+  "usingComponents": {
+    "uni-icons": "/uni_modules/uni-icons/components/uni-icons/uni-icons",
+    "uni-badge": "/uni_modules/uni-badge/components/uni-badge/uni-badge",
+    "i-swiper": "/components/i-swiper/i-swiper",
+    "i-nav-list": "/components/i-nav-list/i-nav-list",
+    "i-notice-list": "/components/i-notice-list/i-notice-list",
+    "i-title": "/components/i-title/i-title",
+    "i-scroll-list": "/components/i-scroll-list/i-scroll-list",
+    "i-special-offer": "/components/i-special-offer/i-special-offer",
+    "i-list-top": "/components/i-list-top/i-list-top"
+  }
+}

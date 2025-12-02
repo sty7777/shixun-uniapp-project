@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "订单列表",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "i-order-list": "/components/i-order-list/i-order-list"
+  }
+}

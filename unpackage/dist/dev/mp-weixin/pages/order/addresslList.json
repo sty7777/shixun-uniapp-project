@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "地址列表",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "i-address-list": "/components/i-address-list/i-address-list"
+  }
+}

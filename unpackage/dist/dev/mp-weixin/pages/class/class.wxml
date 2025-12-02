@@ -1,0 +1,1 @@
+<view><i-category vue-id="8595db64-1" categoryList="{{categoryList}}" subCategoryList="{{subCategoryList}}" data-event-opts="{{[['^categoryMainClick',[['categoryMainClick']]],['^categorySubClick',[['categorySubClick']]]]}}" bind:categoryMainClick="__e" bind:categorySubClick="__e" bind:__l="__l"></i-category></view>

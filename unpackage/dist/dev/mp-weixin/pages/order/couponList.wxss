@@ -1,0 +1,25 @@
+
+.dotted.data-v-323b993e {
+	        position: relative;
+}
+.dotted.data-v-323b993e:before {
+        content: ' ';
+        width: 0;
+        height: 100%;
+        position: absolute;
+        /* 小球形状 */
+        border-right: 6px dotted white;
+        left: -3px;
+        top: 0px;
+}
+.dotted.data-v-323b993e::after {
+        content: ' ';
+        width: 0;
+        height: 100%;
+        position: absolute;
+        /* 小球形状 */
+        border-right: 6px dotted white;
+        right: -3px;
+        top: 0px;
+}
+

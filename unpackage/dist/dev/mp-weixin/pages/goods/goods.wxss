@@ -1,0 +1,491 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- 全局样式 --- */
+page {
+	background-color: #f7f7f7;
+	min-height: 100vh;
+}
+.container {
+	padding-bottom: 120rpx; /* 防止内容被底部按钮遮挡 */
+}
+/* --- 1. 顶部导航 --- */
+.nav-bar {
+	background-color: #fff;
+	height: 88rpx;
+	display: flex;
+	align-items: center;
+	border-bottom: 1rpx solid #eee;
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+	z-index: 10;
+}
+.nav-scroll {
+	white-space: nowrap;
+	width: 100%;
+	padding: 0 20rpx;
+}
+.nav-item {
+	display: inline-block;
+	margin-right: 40rpx;
+	font-size: 30rpx;
+	color: #666;
+	line-height: 80rpx;
+	position: relative;
+}
+.nav-item.active {
+	color: #000;
+	font-weight: bold;
+	font-size: 32rpx;
+}
+.nav-item.active::after {
+	content: '';
+	position: absolute;
+	bottom: 10rpx;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	        transform: translateX(-50%);
+	width: 40rpx;
+	height: 4rpx;
+	background-color: #ff5000;
+	border-radius: 4rpx;
+}
+/* --- 2. 头部标题 --- */
+.header-section {
+	background-color: #fff;
+	padding: 30rpx 0;
+	text-align: center;
+	margin-bottom: 20rpx;
+}
+.main-title {
+	font-size: 36rpx;
+	font-weight: 500;
+	color: #333;
+	margin-bottom: 10rpx;
+}
+.sub-title {
+	font-size: 24rpx;
+	color: #999;
+}
+/* --- 3. 商品列表 (双列布局) --- */
+.goods-list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding: 0 20rpx;
+}
+.goods-item {
+	width: 48%; /* 双列 */
+	background-color: #fff;
+	border-radius: 12rpx;
+	margin-bottom: 20rpx;
+	overflow: hidden;
+	box-shadow: 0 2rpx 10rpx rgba(0,0,0,0.05);
+	display: flex;
+	flex-direction: column;
+}
+.goods-img {
+	width: 100%;
+	height: 340rpx; /* 保持图片正方形或长方形 */
+	background-color: #eeeeee;
+}
+.goods-info {
+	padding: 20rpx;
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.goods-name {
+	font-size: 28rpx;
+	color: #333;
+	line-height: 1.4;
+	margin-bottom: 16rpx;
+	/* 限制两行显示 */
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+}
+.price-stock-row {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 20rpx;
+}
+.price {
+	font-size: 34rpx;
+	color: #d13a3a; /* 仿图示的深红色 */
+	font-weight: bold;
+}
+.stock {
+	font-size: 22rpx;
+	color: #999;
+}
+.action-row {
+	border-top: 1rpx solid #f0f0f0;
+	padding-top: 16rpx;
+	text-align: right;
+}
+.btn-remove {
+	background-color: #fff;
+	border: 1rpx solid #ddd;
+	color: #666;
+	font-size: 24rpx;
+	padding: 0 20rpx;
+	line-height: 50rpx;
+	border-radius: 25rpx;
+}
+.empty-tip {
+	width: 100%;
+	text-align: center;
+	color: #999;
+	margin-top: 100rpx;
+}
+/* --- 4. 悬浮添加按钮 (FAB) --- */
+.fab-add {
+	position: fixed;
+	right: 40rpx;
+	bottom: 60rpx;
+	width: 110rpx;
+	height: 110rpx;
+	background: linear-gradient(135deg, #ff9000, #ff5000);
+	border-radius: 50%;
+	box-shadow: 0 6rpx 20rpx rgba(255, 80, 0, 0.4);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	z-index: 100;
+}
+.plus-icon {
+	color: #fff;
+	font-size: 40rpx;
+	line-height: 1;
+	margin-top: -5rpx;
+}
+.add-text {
+	color: #fff;
+	font-size: 20rpx;
+}
+/* --- 5. 弹窗样式 --- */
+.modal-mask {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.6);
+	z-index: 200;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.modal-content {
+	width: 85%;
+	background-color: #fff;
+	border-radius: 20rpx;
+	overflow: hidden;
+	max-height: 80vh;
+	display: flex;
+	flex-direction: column;
+}
+.modal-header {
+	padding: 30rpx;
+	text-align: center;
+	font-size: 32rpx;
+	font-weight: bold;
+	border-bottom: 1rpx solid #eee;
+}
+.modal-body {
+	padding: 30rpx;
+	overflow-y: auto;
+}
+.form-item {
+	margin-bottom: 30rpx;
+}
+.form-item .label {
+	display: block;
+	font-size: 28rpx;
+	color: #333;
+	margin-bottom: 16rpx;
+}
+.form-item .input {
+	background-color: #f7f8fa;
+	height: 80rpx;
+	padding: 0 20rpx;
+	border-radius: 10rpx;
+	font-size: 28rpx;
+}
+.form-item .textarea {
+	background-color: #f7f8fa;
+	width: 100%;
+	height: 160rpx;
+	padding: 20rpx;
+	box-sizing: border-box;
+	border-radius: 10rpx;
+	font-size: 28rpx;
+}
+.upload-box {
+	width: 160rpx;
+	height: 160rpx;
+	background-color: #f7f8fa;
+	border-radius: 10rpx;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+	border: 1rpx dashed #ccc;
+}
+.upload-placeholder {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	color: #999;
+	font-size: 24rpx;
+}
+.camera-icon {
+	font-size: 40rpx;
+	margin-bottom: 10rpx;
+}
+.preview-img {
+	width: 100%;
+	height: 100%;
+}
+.modal-footer {
+	display: flex;
+	border-top: 1rpx solid #eee;
+}
+.modal-footer button {
+	flex: 1;
+	background-color: #fff;
+	border-radius: 0;
+	font-size: 30rpx;
+	height: 100rpx;
+	line-height: 100rpx;
+}
+.modal-footer button::after {
+	border: none;
+}
+.btn-cancel {
+	color: #666;
+}
+.btn-submit {
+	color: #ff5000;
+	font-weight: bold;
+	border-left: 1rpx solid #eee;
+}
+

@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "全部评价",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "i-evaluate-list": "/components/i-evaluate-list/i-evaluate-list"
+  }
+}

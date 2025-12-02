@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "通知公告",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "i-news-list": "/components/i-news-list/i-news-list"
+  }
+}

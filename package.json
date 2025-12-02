@@ -1,0 +1,19 @@
+{
+    "dependencies": {
+        "address-parse": "^1.2.19"
+    },
+    "id": "laochang-mall",
+    "name": "shangjia",
+    "displayName": "shangjia",
+    "version": "1.0.0",
+    "description": "第一次发布请大家多多指教",
+    "keywords": [
+        "商城模板"
+    ],
+    "dcloudext": {
+        "category": [
+            "uni-app前端模板",
+            "uni-app前端项目模板"
+        ]
+    }
+}
