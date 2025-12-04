@@ -1,1 +1,0 @@
-<view><view class="flex align-center justify-between bg-white py-3"><block wx:for="{{resdata}}" wx:for-item="item" wx:for-index="index" wx:key="index"><view data-event-opts="{{[['tap',[['toShow',['$0'],[[['resdata','',index]]]]]]]}}" class="flex-1 text-center" bindtap="__e"><view class="font32">100</view><view class="text-muted font24 mt-1">优惠券</view></view></block></view></view>

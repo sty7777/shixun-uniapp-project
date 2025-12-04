@@ -1,13 +1,10 @@
 {
-  "setting": {
-    "urlCheck": false
-  },
   "condition": {
     "miniprogram": {
       "list": [
         {
-          "name": "pages/goods/goods",
-          "pathName": "pages/goods/goods",
+          "name": "pages/cart/cart",
+          "pathName": "pages/cart/cart",
           "query": "",
           "scene": null,
           "launchMode": "default"

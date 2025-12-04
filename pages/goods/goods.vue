@@ -146,6 +146,22 @@
 				}
 			}
 		},
+		
+		 // 【新增】监听页面显示
+		    onShow() {
+		        // 1. 检查有没有“暗号”
+		        const shouldOpen = uni.getStorageSync('autoOpenAdd');
+		        
+		        // 2. 如果有，说明是从“发布商品”跳过来的
+		        if (shouldOpen) {
+		            // 打开弹窗 (调用你之前写好的方法)
+		            this.openModal();
+		            
+		            // 3. 【重要】用完立马销毁暗号，防止下次正常点击“商品管理”进来时也弹出
+		            uni.removeStorageSync('autoOpenAdd');
+		        }
+		    },
+		
 		methods: {
 			// 1. 删除/下架商品
 			removeItem(index) {
